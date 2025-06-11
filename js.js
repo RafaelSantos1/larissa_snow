@@ -20,6 +20,7 @@ function recize_notes() {
 
 //-> Main function that enables all the notes.
 function notes_ready() {
+  
   gsap.to(".js-envelop-content", {
     height: "110%",
     duration: 0.5
@@ -152,3 +153,18 @@ document.querySelector(".js-sticker").addEventListener("click", sticker);
 window.onresize = function (event) {
   recize_notes();
 };
+
+function spawnHearts() {
+  const container = document.querySelector('.hearts-container');
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.textContent = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = 10 + Math.random() * 30 + 'px';
+  container.appendChild(heart);
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(spawnHearts, 500);
