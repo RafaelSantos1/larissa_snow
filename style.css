@@ -237,4 +237,8 @@ body {
     transform: translateY(-10vh) scale(1.2) rotate(360deg);
     opacity: 0;
   }
+}
+.container {
+  margin-top: -400px;
+  color: #ffe6f0;
 }/*# sourceMappingURL=style.css.map */
